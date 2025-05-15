@@ -6,40 +6,39 @@ import { MdPrecisionManufacturing, MdSupportAgent } from "react-icons/md";
 
 const Home = () => {
     return (
-        <div className="min-h-screen text-gray-800 bg-gray-50">
+        <div className="min-h-screen overflow-x-hidden text-gray-800 bg-gray-50">
             {/* Hero Section */}
-            <section className="relative px-4 py-32 overflow-hidden text-white bg-gradient-to-br from-gray-900 to-blue-900">
+            <section className="relative w-full px-4 py-24 text-white bg-gradient-to-br from-gray-900 to-blue-900 sm:py-32">
                 <div className="absolute inset-0 z-0 opacity-20">
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070')] bg-cover bg-center"></div>
                 </div>
-                
-                <div className="relative z-10 max-w-6xl mx-auto text-center">
+                <div className="relative z-10 w-full max-w-6xl px-4 mx-auto text-center">
                     <motion.h1
-                        className="mb-6 text-4xl font-bold md:text-6xl"
+                        className="mb-6 text-3xl font-bold leading-tight sm:text-5xl md:text-6xl"
                         initial={{ y: -30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="text-blue-400">Smart</span> Automated Solutions <br />by <span className="text-yellow-400">HMA Build & Automation</span>
+                        <span className="text-blue-400">Smart</span> Automated Solutions <br className="hidden sm:block" />by <span className="text-yellow-400">HMA Build & Automation</span>
                     </motion.h1>
                     <motion.p
-                        className="max-w-3xl mx-auto mb-10 text-lg md:text-xl"
+                        className="w-full max-w-2xl mx-auto mb-10 text-lg sm:text-xl"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
                     >
                         Cutting-edge automatic doors and access systems engineered for security, convenience, and futuristic living.
                     </motion.p>
-                    <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                    <div className="flex flex-col items-center justify-center w-full gap-4 sm:flex-row">
                         <Link
                             to="/products"
-                            className="inline-block px-8 py-4 font-semibold text-white transition-all transform bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 hover:shadow-xl hover:-translate-y-1"
+                            className="inline-block w-full px-6 py-4 font-semibold text-white transition-all transform bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 hover:shadow-xl hover:-translate-y-1 sm:w-auto"
                         >
                             View Our Products
                         </Link>
                         <Link
                             to="/contact"
-                            className="inline-block px-8 py-4 font-semibold text-blue-400 transition-all transform border-2 border-blue-400 rounded-lg shadow-lg hover:bg-blue-400 hover:text-white hover:shadow-xl hover:-translate-y-1"
+                            className="inline-block w-full px-6 py-4 font-semibold text-blue-400 transition-all transform border-2 border-blue-400 rounded-lg shadow-lg hover:bg-blue-400 hover:text-white hover:shadow-xl hover:-translate-y-1 sm:w-auto"
                         >
                             Get a Free Quote
                         </Link>
@@ -48,73 +47,50 @@ const Home = () => {
             </section>
 
             {/* Featured Products Section */}
-            <section className="px-4 py-20 bg-white">
-                <div className="max-w-6xl mx-auto">
-                    <div className="mb-16 text-center">
-                        <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Premium Automation Solutions</h2>
-                        <p className="max-w-2xl mx-auto text-gray-600">Innovative products designed for seamless access control and modern living</p>
-                    </div>
-                    
-                    <div className="grid gap-8 md:grid-cols-3">
-                        <motion.div 
-                            className="relative p-8 overflow-hidden transition-all border border-gray-200 bg-gray-50 rounded-xl hover:border-blue-400 group"
-                            whileHover={{ y: -10 }}
-                        >
-                            <div className="absolute text-blue-100 transition -right-10 -top-10 text-9xl opacity-20 group-hover:opacity-30">
-                                <FaDoorOpen />
-                            </div>
-                            <div className="relative z-10">
-                                <div className="flex items-center justify-center w-16 h-16 mb-6 text-blue-600 bg-blue-100 rounded-lg">
-                                    <FaDoorOpen className="text-2xl" />
-                                </div>
-                                <h3 className="mb-3 text-xl font-semibold">Automatic Sliding Doors</h3>
-                                <p className="mb-6 text-gray-600">Sleek, energy-efficient sliding doors with motion sensors and smart controls for commercial and residential spaces.</p>
-                                <Link to="/products/sliding-doors" className="flex items-center font-medium text-blue-600 transition group-hover:text-blue-800">
-                                    Explore <span className="ml-2">→</span>
-                                </Link>
-                            </div>
-                        </motion.div>
-
-                        <motion.div 
-                            className="relative p-8 overflow-hidden transition-all border border-gray-200 bg-gray-50 rounded-xl hover:border-blue-400 group"
-                            whileHover={{ y: -10 }}
-                        >
-                            <div className="absolute text-blue-100 transition -right-10 -top-10 text-9xl opacity-20 group-hover:opacity-30">
-                                <FaRobot />
-                            </div>
-                            <div className="relative z-10">
-                                <div className="flex items-center justify-center w-16 h-16 mb-6 text-blue-600 bg-blue-100 rounded-lg">
-                                    <FaRobot className="text-2xl" />
-                                </div>
-                                <h3 className="mb-3 text-xl font-semibold">Smart Gate Automation</h3>
-                                <p className="mb-6 text-gray-600">Advanced swing and sliding gate systems with biometric access, remote control, and AI-powered security features.</p>
-                                <Link to="/products/gate-automation" className="flex items-center font-medium text-blue-600 transition group-hover:text-blue-800">
-                                    Explore <span className="ml-2">→</span>
-                                </Link>
-                            </div>
-                        </motion.div>
-
-                        <motion.div 
-                            className="relative p-8 overflow-hidden transition-all border border-gray-200 bg-gray-50 rounded-xl hover:border-blue-400 group"
-                            whileHover={{ y: -10 }}
-                        >
-                            <div className="absolute text-blue-100 transition -right-10 -top-10 text-9xl opacity-20 group-hover:opacity-30">
-                                <IoMdSettings />
-                            </div>
-                            <div className="relative z-10">
-                                <div className="flex items-center justify-center w-16 h-16 mb-6 text-blue-600 bg-blue-100 rounded-lg">
-                                    <IoMdSettings className="text-2xl" />
-                                </div>
-                                <h3 className="mb-3 text-xl font-semibold">Industrial Automation</h3>
-                                <p className="mb-6 text-gray-600">Heavy-duty automatic doors and access systems for warehouses, factories, and industrial facilities.</p>
-                                <Link to="/products/industrial" className="flex items-center font-medium text-blue-600 transition group-hover:text-blue-800">
-                                    Explore <span className="ml-2">→</span>
-                                </Link>
-                            </div>
-                        </motion.div>
+            <section className="w-full px-4 py-16 bg-white sm:px-6 md:py-20">
+                <div className="w-full max-w-6xl mx-auto">
+                    <div className="w-full mb-12 text-center">
+                        <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Our Premium Automation Solutions</h2>
+                        <p className="w-full max-w-2xl mx-auto text-gray-600">Innovative products designed for seamless access control and modern living</p>
                     </div>
 
-                    <div className="mt-16 text-center">
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        {[{
+                            icon: <FaDoorOpen className="text-2xl" />, title: "Automatic Sliding Doors",
+                            desc: "Sleek, energy-efficient sliding doors with motion sensors and smart controls for commercial and residential spaces.",
+                            link: "/products/sliding-doors"
+                        }, {
+                            icon: <FaRobot className="text-2xl" />, title: "Smart Gate Automation",
+                            desc: "Advanced swing and sliding gate systems with biometric access, remote control, and AI-powered security features.",
+                            link: "/products/gate-automation"
+                        }, {
+                            icon: <IoMdSettings className="text-2xl" />, title: "Industrial Automation",
+                            desc: "Heavy-duty automatic doors and access systems for warehouses, factories, and industrial facilities.",
+                            link: "/products/industrial"
+                        }].map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                className="relative w-full p-6 transition-all border border-gray-200 bg-gray-50 rounded-xl hover:border-blue-400 group"
+                                whileHover={{ y: -10 }}
+                            >
+                                <div className="absolute text-blue-100 transition -right-10 -top-10 text-9xl opacity-20 group-hover:opacity-30">
+                                    {item.icon}
+                                </div>
+                                <div className="relative z-10">
+                                    <div className="flex items-center justify-center w-16 h-16 mb-6 text-blue-600 bg-blue-100 rounded-lg">
+                                        {item.icon}
+                                    </div>
+                                    <h3 className="mb-3 text-xl font-semibold">{item.title}</h3>
+                                    <p className="mb-6 text-gray-600">{item.desc}</p>
+                                    <Link to={item.link} className="flex items-center font-medium text-blue-600 transition group-hover:text-blue-800">
+                                        Explore <span className="ml-2">→</span>
+                                    </Link>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    <div className="w-full mt-12 text-center">
                         <Link
                             to="/products"
                             className="inline-block px-8 py-3 font-semibold text-white transition-all bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 hover:shadow-xl"
@@ -126,17 +102,17 @@ const Home = () => {
             </section>
 
             {/* Technology Showcase */}
-            <section className="px-4 py-20 text-white bg-gradient-to-r from-gray-900 to-blue-900">
-                <div className="max-w-6xl mx-auto">
-                    <div className="mb-16 text-center">
-                        <h2 className="mb-4 text-3xl font-bold md:text-4xl">Advanced Access Technology</h2>
-                        <p className="max-w-2xl mx-auto text-blue-200">We integrate the latest innovations for seamless, secure automation</p>
+            <section className="w-full px-4 py-20 text-white bg-gradient-to-r from-gray-900 to-blue-900 sm:px-6">
+                <div className="w-full max-w-6xl mx-auto">
+                    <div className="w-full mb-16 text-center">
+                        <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Advanced Access Technology</h2>
+                        <p className="w-full max-w-2xl mx-auto text-blue-200">We integrate the latest innovations for seamless, secure automation</p>
                     </div>
 
-                    <div className="grid items-center gap-12 md:grid-cols-2">
-                        <div>
+                    <div className="grid w-full gap-12 sm:grid-cols-1 lg:grid-cols-2">
+                        <div className="w-full">
                             <motion.div 
-                                className="p-8 border bg-white/10 rounded-xl border-white/20 backdrop-blur-sm"
+                                className="w-full p-6 border bg-white/10 rounded-xl border-white/20 backdrop-blur-sm sm:p-8"
                                 initial={{ x: -50, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6 }}
@@ -173,7 +149,7 @@ const Home = () => {
                         </div>
 
                         <motion.div 
-                            className="relative"
+                            className="relative w-full mt-8 sm:mt-0"
                             initial={{ x: 50, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.6 }}
@@ -199,16 +175,16 @@ const Home = () => {
             </section>
 
             {/* Why Choose Us Section */}
-            <section className="px-4 py-20 bg-white">
-                <div className="max-w-6xl mx-auto">
-                    <div className="mb-16 text-center">
-                        <h2 className="mb-4 text-3xl font-bold md:text-4xl">Why HMA Build & Automation?</h2>
-                        <p className="max-w-2xl mx-auto text-gray-600">We're redefining access automation with innovation and excellence</p>
+            <section className="w-full px-4 py-20 bg-white sm:px-6">
+                <div className="w-full max-w-6xl mx-auto">
+                    <div className="w-full mb-16 text-center">
+                        <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Why HMA Build & Automation?</h2>
+                        <p className="w-full max-w-2xl mx-auto text-gray-600">We're redefining access automation with innovation and excellence</p>
                     </div>
 
-                    <div className="grid gap-8 md:grid-cols-3">
+                    <div className="grid w-full gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         <motion.div 
-                            className="p-8 transition-all bg-gray-50 rounded-xl hover:shadow-lg"
+                            className="w-full p-6 transition-all bg-gray-50 rounded-xl hover:shadow-lg sm:p-8"
                             whileHover={{ y: -5 }}
                         >
                             <div className="flex items-center justify-center mx-auto mb-6 text-blue-600 bg-blue-100 rounded-full w-14 h-14">
@@ -219,7 +195,7 @@ const Home = () => {
                         </motion.div>
 
                         <motion.div 
-                            className="p-8 transition-all bg-gray-50 rounded-xl hover:shadow-lg"
+                            className="w-full p-6 transition-all bg-gray-50 rounded-xl hover:shadow-lg sm:p-8"
                             whileHover={{ y: -5 }}
                         >
                             <div className="flex items-center justify-center mx-auto mb-6 text-blue-600 bg-blue-100 rounded-full w-14 h-14">
@@ -230,7 +206,7 @@ const Home = () => {
                         </motion.div>
 
                         <motion.div 
-                            className="p-8 transition-all bg-gray-50 rounded-xl hover:shadow-lg"
+                            className="w-full p-6 transition-all bg-gray-50 rounded-xl hover:shadow-lg sm:p-8"
                             whileHover={{ y: -5 }}
                         >
                             <div className="flex items-center justify-center mx-auto mb-6 text-blue-600 bg-blue-100 rounded-full w-14 h-14">
@@ -241,7 +217,7 @@ const Home = () => {
                         </motion.div>
                     </div>
 
-                    <div className="mt-16 text-center">
+                    <div className="w-full mt-16 text-center">
                         <Link
                             to="/about"
                             className="inline-block px-8 py-3 font-semibold text-blue-600 transition-all border-2 border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg"
@@ -253,20 +229,20 @@ const Home = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="px-4 py-20 text-white bg-gradient-to-r from-blue-600 to-blue-800">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ready to Automate Your Space?</h2>
+            <section className="w-full px-4 py-20 text-white bg-gradient-to-r from-blue-600 to-blue-800 sm:px-6">
+                <div className="w-full max-w-4xl mx-auto text-center">
+                    <h2 className="mb-6 text-3xl font-bold sm:text-4xl">Ready to Automate Your Space?</h2>
                     <p className="mb-10 text-xl">Get a free consultation and quote for your custom automation solution today.</p>
-                    <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                    <div className="flex flex-col justify-center w-full gap-4 sm:flex-row">
                         <Link
                             to="/contact"
-                            className="inline-block px-8 py-4 font-semibold text-blue-600 transition-all transform bg-white rounded-lg shadow-lg hover:bg-gray-100 hover:shadow-xl hover:-translate-y-1"
+                            className="inline-block w-full px-6 py-4 font-semibold text-blue-600 transition-all transform bg-white rounded-lg shadow-lg hover:bg-gray-100 hover:shadow-xl hover:-translate-y-1 sm:w-auto"
                         >
                             Contact Our Experts
                         </Link>
                         <Link
                             to="/products"
-                            className="inline-block px-8 py-4 font-semibold text-white transition-all transform border-2 border-white rounded-lg shadow-lg hover:bg-white/10 hover:shadow-xl hover:-translate-y-1"
+                            className="inline-block w-full px-6 py-4 font-semibold text-white transition-all transform border-2 border-white rounded-lg shadow-lg hover:bg-white/10 hover:shadow-xl hover:-translate-y-1 sm:w-auto"
                         >
                             Browse Products
                         </Link>
