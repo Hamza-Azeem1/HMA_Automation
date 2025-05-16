@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar";
 import NotFound from "./Pages/NotFound";
 import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
+import Product from "./Pages/Product";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/product" element={<Product />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

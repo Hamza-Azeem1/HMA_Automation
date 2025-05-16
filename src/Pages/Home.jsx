@@ -31,7 +31,7 @@ const Home = () => {
                     </motion.p>
                     <div className="flex flex-col items-center justify-center w-full gap-4 sm:flex-row">
                         <Link
-                            to="/products"
+                            to="/product"
                             className="inline-block w-full px-6 py-4 font-semibold text-white transition-all transform bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 hover:shadow-xl hover:-translate-y-1 sm:w-auto"
                         >
                             View Our Products
@@ -92,7 +92,7 @@ const Home = () => {
 
                     <div className="w-full mt-12 text-center">
                         <Link
-                            to="/products"
+                            to="/product"
                             className="inline-block px-8 py-3 font-semibold text-white transition-all bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 hover:shadow-xl"
                         >
                             View All Products
@@ -241,7 +241,7 @@ const Home = () => {
                             Contact Our Experts
                         </Link>
                         <Link
-                            to="/products"
+                            to="/product"
                             className="inline-block w-full px-6 py-4 font-semibold text-white transition-all transform border-2 border-white rounded-lg shadow-lg hover:bg-white/10 hover:shadow-xl hover:-translate-y-1 sm:w-auto"
                         >
                             Browse Products

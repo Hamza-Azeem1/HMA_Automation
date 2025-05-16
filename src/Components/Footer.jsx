@@ -69,7 +69,7 @@ const Footer = () => {
                             </Link>
                         </motion.li>
                         <motion.li whileHover={{ x: 5 }}>
-                            <Link to="/products" className="flex items-center text-sm transition-all hover:text-white">
+                            <Link to="/product" className="flex items-center text-sm transition-all hover:text-white">
                                 <span className="w-2 h-2 mr-2 bg-blue-400 rounded-full"></span>
                                 Products
                             </Link>
