@@ -66,81 +66,81 @@ const Contact = () => {
 
     return (
         <motion.div
-            className="min-h-screen px-6 py-16 pt-24 text-gray-100 bg-gradient-to-br from-gray-900 to-blue-900"
+            className="min-h-screen px-2 py-8 pt-20 text-gray-100 bg-gradient-to-br from-gray-900 to-blue-900 sm:px-4 md:px-6 md:py-16 md:pt-24"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
         >
             {/* Header */}
-            <div className="mb-12 text-center">
+            <div className="mb-8 text-center md:mb-12">
                 <motion.h1
-                    className="mb-4 text-4xl font-extrabold text-white md:text-5xl"
+                    className="mb-3 text-2xl font-extrabold text-white sm:text-3xl md:text-4xl lg:text-5xl"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.2 }}
                 >
                     Request a Quote
                 </motion.h1>
-                <p className="max-w-xl mx-auto text-lg text-blue-200">
+                <p className="max-w-xl mx-auto text-base text-blue-200 sm:text-lg">
                     Get customized pricing for your automation project
                 </p>
             </div>
 
             {/* Main Content */}
-            <div className="grid max-w-6xl gap-10 mx-auto md:grid-cols-2">
+            <div className="grid max-w-4xl gap-8 mx-auto md:max-w-6xl md:grid-cols-2">
                 {/* Quote Form */}
                 <motion.form
-                    className="p-8 space-y-6 border shadow-xl bg-white/10 backdrop-blur-sm rounded-xl border-white/20"
+                    className="p-4 space-y-5 border shadow-xl bg-white/10 backdrop-blur-sm rounded-xl border-white/20 sm:p-6 md:p-8"
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.3 }}
                     onSubmit={(e) => e.preventDefault()}
                 >
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2">
                         <div>
-                            <label className="block mb-2 text-sm font-semibold text-blue-200">First Name</label>
+                            <label className="block mb-1 text-sm font-semibold text-blue-200 sm:mb-2">First Name</label>
                             <input
                                 type="text"
                                 placeholder="John"
-                                className="w-full px-4 py-3 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full px-3 py-2 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3"
                                 required
                             />
                         </div>
                         <div>
-                            <label className="block mb-2 text-sm font-semibold text-blue-200">Last Name</label>
+                            <label className="block mb-1 text-sm font-semibold text-blue-200 sm:mb-2">Last Name</label>
                             <input
                                 type="text"
                                 placeholder="Doe"
-                                className="w-full px-4 py-3 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full px-3 py-2 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3"
                                 required
                             />
                         </div>
                     </div>
 
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-blue-200">Email Address</label>
+                        <label className="block mb-1 text-sm font-semibold text-blue-200 sm:mb-2">Email Address</label>
                         <input
                             type="email"
                             placeholder="your@email.com"
-                            className="w-full px-4 py-3 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-3 py-2 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3"
                             required
                         />
                     </div>
 
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-blue-200">Phone Number</label>
+                        <label className="block mb-1 text-sm font-semibold text-blue-200 sm:mb-2">Phone Number</label>
                         <input
                             type="tel"
                             placeholder="+92 300 1234567"
-                            className="w-full px-4 py-3 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-3 py-2 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3"
                             required
                         />
                     </div>
 
                     <div className="relative">
-                        <label className="block mb-2 text-sm font-semibold text-blue-200">Product Category</label>
+                        <label className="block mb-1 text-sm font-semibold text-blue-200 sm:mb-2">Product Category</label>
                         <div 
-                            className="flex items-center justify-between w-full px-4 py-3 border rounded-lg cursor-pointer bg-white/5 border-white/20"
+                            className="flex items-center justify-between w-full px-3 py-2 border rounded-lg cursor-pointer bg-white/5 border-white/20 sm:px-4 sm:py-3"
                             onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
                         >
                             <span className={selectedCategory ? "text-white" : "text-white/50"}>
@@ -165,9 +165,9 @@ const Contact = () => {
 
                     {selectedCategory && (
                         <div className="relative">
-                            <label className="block mb-2 text-sm font-semibold text-blue-200">Product</label>
+                            <label className="block mb-1 text-sm font-semibold text-blue-200 sm:mb-2">Product</label>
                             <div 
-                                className="flex items-center justify-between w-full px-4 py-3 border rounded-lg cursor-pointer bg-white/5 border-white/20"
+                                className="flex items-center justify-between w-full px-3 py-2 border rounded-lg cursor-pointer bg-white/5 border-white/20 sm:px-4 sm:py-3"
                                 onClick={() => setShowProductDropdown(!showProductDropdown)}
                             >
                                 <span className={selectedProduct ? "text-white" : "text-white/50"}>
@@ -194,29 +194,29 @@ const Contact = () => {
                     {selectedProduct && (
                         <>
                             <div>
-            <label className="block mb-1 text-sm font-semibold text-blue-200 sm:mb-2">
-                Installation Date Preference
-            </label>
-            <div className="relative">
-                <input
-                    type="date"
-                    ref={dateInputRef}
-                    min={today}
-                    className="w-full px-3 py-2 pr-10 text-white transition border rounded-lg sm:px-4 sm:py-3 bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <FaCalendarAlt
-                    className="absolute right-3 top-2.5 sm:top-3.5 text-white/50 cursor-pointer"
-                    onClick={() => dateInputRef.current?.showPicker()}
-                />
-            </div>
-        </div>
+                                <label className="block mb-1 text-sm font-semibold text-blue-200 sm:mb-2">
+                                    Installation Date Preference
+                                </label>
+                                <div className="relative">
+                                    <input
+                                        type="date"
+                                        ref={dateInputRef}
+                                        min={today}
+                                        className="w-full px-3 py-2 pr-10 text-white transition border rounded-lg sm:px-4 sm:py-3 bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                    <FaCalendarAlt
+                                        className="absolute right-3 top-2.5 sm:top-3.5 text-white/50 cursor-pointer"
+                                        onClick={() => dateInputRef.current?.showPicker()}
+                                    />
+                                </div>
+                            </div>
 
                             <div>
-                                <label className="block mb-2 text-sm font-semibold text-blue-200">Project Details</label>
+                                <label className="block mb-1 text-sm font-semibold text-blue-200 sm:mb-2">Project Details</label>
                                 <textarea
                                     rows="4"
                                     placeholder="Tell us about your project requirements, dimensions, and any special requests..."
-                                    className="w-full px-4 py-3 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full px-3 py-2 text-white transition border rounded-lg bg-white/5 border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3"
                                     required
                                 ></textarea>
                             </div>
@@ -225,7 +225,7 @@ const Contact = () => {
 
                     <button
                         type="submit"
-                        className="w-full px-6 py-4 mt-6 font-semibold text-white transition-all transform bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1"
+                        className="w-full px-4 py-3 mt-4 font-semibold text-white transition-all transform bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 sm:px-6 sm:py-4 sm:mt-6"
                     >
                         Get Your Custom Quote
                     </button>
@@ -233,59 +233,59 @@ const Contact = () => {
 
                 {/* Contact Info */}
                 <motion.div
-                    className="space-y-6"
+                    className="space-y-4 sm:space-y-6"
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4 }}
                 >
                     <motion.div 
-                        className="flex items-start p-6 space-x-6 transition border shadow-lg bg-white/10 backdrop-blur-sm rounded-xl border-white/20 hover:border-blue-500"
+                        className="flex flex-col items-start p-4 space-y-3 transition border shadow-lg bg-white/10 backdrop-blur-sm rounded-xl border-white/20 hover:border-blue-500 sm:flex-row sm:space-x-6 sm:space-y-0 sm:p-6"
                         whileHover={{ y: -5 }}
                     >
-                        <div className="flex-shrink-0 p-3 bg-blue-600 rounded-lg">
+                        <div className="flex-shrink-0 p-3 mb-2 bg-blue-600 rounded-lg sm:mb-0">
                             <FaPhoneAlt className="text-xl text-white" />
                         </div>
                         <div>
-                            <h4 className="mb-2 text-lg font-semibold text-white">Phone Support</h4>
+                            <h4 className="mb-1 text-base font-semibold text-white sm:text-lg">Phone Support</h4>
                             <div className="space-y-1">
                                 <p className="text-blue-200">0324 6953254</p>
                                 <p className="text-blue-200">0329 1667476</p>
                             </div>
-                            <p className="mt-2 text-sm text-white/70">Available 9:00 AM - 7:00 PM, 7 days a week</p>
+                            <p className="mt-1 text-xs text-white/70 sm:mt-2 sm:text-sm">Available 9:00 AM - 7:00 PM, 7 days a week</p>
                         </div>
                     </motion.div>
 
                     <motion.div 
-                        className="flex items-start p-6 space-x-6 transition border shadow-lg bg-white/10 backdrop-blur-sm rounded-xl border-white/20 hover:border-blue-500"
+                        className="flex flex-col items-start p-4 space-y-3 transition border shadow-lg bg-white/10 backdrop-blur-sm rounded-xl border-white/20 hover:border-blue-500 sm:flex-row sm:space-x-6 sm:space-y-0 sm:p-6"
                         whileHover={{ y: -5 }}
                     >
-                        <div className="flex-shrink-0 p-3 bg-blue-600 rounded-lg">
+                        <div className="flex-shrink-0 p-3 mb-2 bg-blue-600 rounded-lg sm:mb-0">
                             <FaEnvelope className="text-xl text-white" />
                         </div>
                         <div>
-                            <h4 className="mb-2 text-lg font-semibold text-white">Email Us</h4>
+                            <h4 className="mb-1 text-base font-semibold text-white sm:text-lg">Email Us</h4>
                             <p className="text-blue-200">hmabuildautomatesolution@gmail.com</p>
-                            <p className="mt-2 text-sm text-white/70">Typically respond within 24 hours</p>
+                            <p className="mt-1 text-xs text-white/70 sm:mt-2 sm:text-sm">Typically respond within 24 hours</p>
                         </div>
                     </motion.div>
 
                     <motion.div 
-                        className="flex items-start p-6 space-x-6 transition border shadow-lg bg-white/10 backdrop-blur-sm rounded-xl border-white/20 hover:border-blue-500"
+                        className="flex flex-col items-start p-4 space-y-3 transition border shadow-lg bg-white/10 backdrop-blur-sm rounded-xl border-white/20 hover:border-blue-500 sm:flex-row sm:space-x-6 sm:space-y-0 sm:p-6"
                         whileHover={{ y: -5 }}
                     >
-                        <div className="flex-shrink-0 p-3 bg-blue-600 rounded-lg">
+                        <div className="flex-shrink-0 p-3 mb-2 bg-blue-600 rounded-lg sm:mb-0">
                             <FaMapMarkerAlt className="text-xl text-white" />
                         </div>
                         <div>
-                            <h4 className="mb-2 text-lg font-semibold text-white">Our Location</h4>
+                            <h4 className="mb-1 text-base font-semibold text-white sm:text-lg">Our Location</h4>
                             <p className="text-blue-200">Lahore, Pakistan</p>
-                            <p className="mt-2 text-sm text-white/70">Serving clients nationwide with regional offices in major cities</p>
+                            <p className="mt-1 text-xs text-white/70 sm:mt-2 sm:text-sm">Serving clients nationwide with regional offices in major cities</p>
                         </div>
                     </motion.div>
 
-                    <div className="p-6 border border-dashed bg-white/5 rounded-xl border-white/20">
-                        <h4 className="mb-3 text-lg font-semibold text-white">Why Get a Quote?</h4>
-                        <ul className="space-y-2 text-sm text-blue-200">
+                    <div className="p-4 border border-dashed bg-white/5 rounded-xl border-white/20 sm:p-6">
+                        <h4 className="mb-2 text-base font-semibold text-white sm:text-lg">Why Get a Quote?</h4>
+                        <ul className="space-y-2 text-xs text-blue-200 sm:text-sm">
                             <li className="flex items-start">
                                 <span className="w-2 h-2 mt-2 mr-3 bg-blue-400 rounded-full"></span>
                                 <span>Personalized pricing for your specific needs</span>
