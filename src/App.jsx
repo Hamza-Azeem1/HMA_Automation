@@ -6,14 +6,14 @@ import Services from "./Pages/Services";
 import Navbar from "./Components/Navbar";
 import NotFound from "./Pages/NotFound";
 import Footer from "./Components/Footer";
-import ScrollToTop from "./Components/ScrollToTop";
+import ScrollAndWhatsApp from "./Components/ScrollAndWhatsApp";
 import Product from "./Pages/Product";
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <ScrollToTop />
+      <ScrollAndWhatsApp  />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
