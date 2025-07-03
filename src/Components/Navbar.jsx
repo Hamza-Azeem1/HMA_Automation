@@ -57,16 +57,20 @@ const Navbar = () => {
                         {/* Logo */}
                         <Link to="/" className="flex items-center shrink-0">
                             <motion.img
-                                src="/Logo.jpg"
+                                src="/Logo.png"
                                 alt="HMA Builders"
-                                className="object-contain w-auto h-12"
+                                className={`object-contain w-auto transition-all duration-300 ${
+                                    scrolled 
+                                        ? "h-14 sm:h-16 md:h-18 lg:h-20" 
+                                        : "h-16 sm:h-18 md:h-22 lg:h-28"
+                                }`}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             />
                         </Link>
 
                         {/* Desktop Menu */}
-                        <div className="items-center hidden space-x-4 md:flex">
+                        <div className="items-center hidden space-x-4 md:flex lg:space-x-6">
                             {navLinks.map((link) => (
                                 <NavLink
                                     key={link.name}
