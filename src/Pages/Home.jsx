@@ -82,9 +82,6 @@ const Home = () => {
                                     </div>
                                     <h3 className="mb-3 text-xl font-semibold">{item.title}</h3>
                                     <p className="mb-6 text-gray-600">{item.desc}</p>
-                                    <Link to={item.link} className="flex items-center font-medium text-blue-600 transition group-hover:text-blue-800">
-                                        Explore <span className="ml-2">→</span>
-                                    </Link>
                                 </div>
                             </motion.div>
                         ))}
